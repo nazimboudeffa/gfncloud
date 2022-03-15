@@ -1,0 +1,24 @@
+{
+  "name": "gfncloud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazimboudeffa/gfncloud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nazimboudeffa/gfncloud/issues"
+  },
+  "homepage": "https://github.com/nazimboudeffa/gfncloud#readme",
+  "dependencies": {
+    "fastify": "^3.27.4",
+    "fastify-static": "^4.5.0",
+    "kinguin-api-es5": "github:nazimboudeffa/kinguin-api-es5"
+  }
+}
