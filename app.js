@@ -5,8 +5,6 @@ const kinguin = require('kinguin-api-es5');
 const prod = true;
 var k = new kinguin(prod);
 
-k.getProductIdWithSteam('1091500') //CyberPunk2077
-
 fastify.register(require('fastify-static'), {
     root: path.join(__dirname, 'public'),
     prefix: '/public/',
@@ -17,6 +15,7 @@ fastify.get('/', function (request, reply) {
 })
 
 fastify.get('/list', function (req, reply) {
+    k.getProductIdWithSteam('1091500') //CyberPunk2077
     return reply.sendFile('list.html')
 })
 
