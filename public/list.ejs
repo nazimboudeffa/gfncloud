@@ -28,10 +28,11 @@
    <h3 align="center">GFN Cloud Gaming Data</h3>   
    <br /><br />
    <div align="center">
-    <input type="text" name="search" id="search" placeholder="Search Employee Details" class="form-control" />
+    <input type="text" name="search" id="search" placeholder="Search Game Details" class="form-control" />
    </div>
    <ul class="list-group" id="result"></ul>
    <br />
+   <div id="kinguin"><%= gfnId %></div>
   </div>
  </body>
 </html>
@@ -54,16 +55,19 @@ $(document).ready(function(){
     */
     if (value.title.search(expression) != -1)
     {
-     $('#result').append('<li class="list-group-item link-class">'+value.title+'</li>');
+     $('#result').append('<li class="list-group-item link-class" id="game-'+value.id+'">'+value.title+'</li>');
     }
    });   
   });
  });
  
  $('#result').on('click', 'li', function() {
+  /*
   var click_text = $(this).text().split('|');
   $('#search').val($.trim(click_text[0]));
+  */
   $("#result").html('');
+  window.location = 'game/'+$(this).attr('id').split('-')[1];
  });
 });
 </script>
